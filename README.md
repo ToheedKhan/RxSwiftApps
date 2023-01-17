@@ -90,5 +90,7 @@ A scheduler is a context on which a process takes place. So schedulers here are 
 **subscribeOn():** we can switch threads by using this operator.
 **observeOn():** this operator changes the scheduler where the observation happens.
 
+A **Dispose bag** is used for memory management, it keeps on collecting subscriptions and then finally it disposes them off when the controller memory is deallocated. It ensures that there are no memory leaks.
+
 # RxCocoa
 RxCocoa basically contains UI specific functions built on top of the RxSwift library. These functions help us to configure and use the swift UI components in a reactive way.
