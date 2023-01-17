@@ -1,7 +1,7 @@
 # RxSwiftApps
 
 
-#Functional Programming
+# Functional Programming
 
 Mutabililty - Everything immutable.
 Everything in function programming, the variables that you create are actually constant.
@@ -17,14 +17,14 @@ Everything in functional programming is also a pure function.
 This means that a function will **always** produce the same output when given the same input 
 The function creates **zero** side effects outside of it.
 
-#Imperative programming / Object Oriented Programming
+# Imperative programming / Object Oriented Programming
 Issues due to mutable states
 - Concurrency
 - Deadlock
 - Race conditions
 
 
-#RxSwift
+# RxSwift
 
 Reactive functional programming
 in its essence, simplifies developing asynchronus programs by allowing your code to react to new data and process it in sequential manner.
@@ -34,7 +34,7 @@ Simplified developing asynchronous programs but allow your code to react to new 
 RxSwift library allows you to write asynchronous code in a much more concise and compact and maintainable way.
 
 
-##Subjects
+## Subjects
 Observable as well as observer
 After getting events from someone they will forward the results to their subscribers.
 
