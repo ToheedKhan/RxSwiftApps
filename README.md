@@ -24,21 +24,44 @@ Issues due to mutable states
 - Race conditions
 
 
-# RxSwift
+# What is Functional Reactive Programming?
+Functional reactive programming (FRP) is a programming paradigm for reactive programming (asynchronousdataflow programming) using the building blocks of functional programming (e.g. map, reduce, filter)  
+
+Basically, Functional Reactive Programming (FRP), is simply a combination of Functional Programming and Reactive Programming. When using functional programming along with reactive, we mostly use Higher Order Functions (HOF’s) which is like an encapsulation layer hiding out the intricate details of any function’s operational sequences. 
+
 
 Reactive functional programming
 in its essence, simplifies developing asynchronus programs by allowing your code to react to new data and process it in sequential manner.
 
 Simplified developing asynchronous programs but allow your code to react to new data and process it in a sequential, isolated manner.
 
+# RxSwift
 RxSwift library allows you to write asynchronous code in a much more concise and compact and maintainable way.
 
 Reactive programming basically means relying on entities emitting elements, subscribing to its changes and reacting to those changes. So, reactive programming saves you from having to re-check states and manually putting conditions in your code. It remarkably reduces the code lines and makes the code cleaner and easier to manage. Most importantly, it manages asynchronous code execution in a very elegant manner owing to its observable-subscriber method.
 
+**Reactive programming is programming with asynchronous data streams**
  
 These are some basic terminologies that are used while writing code using the Reactive Programming paradigm.
 
-**1. Observable:** it is an entity that can be of any data type and emits elements to its subscribers on happening of every different type of event. Example: it emits error on an error event, emits the received value on an onNext event, etc.
+**1. Observable:** It is an entity that can be of any data type and emits elements to its subscribers on happening of every different type of event. Example: it emits error on an error event, emits the received value on an onNext event, etc.
+
+In RxSwift, streams are represented by Observable Sequences. Arrays, Strings or Dictionaries will be converted to observable sequences. You can create an observable sequence of any Object that conforms to the Sequence Protocol from the Swift Standard Library.
+
+**Observable sequences** can emit zero or more events over their lifetime. In RxSwift, an Event is just an Enumeration Type with 3 possible states:
+
+**.next(value: T) : **
+
+ When a value or collection of values is added to an observable sequence it will send the next event to its subscribers as seen above. The associated value will contain the actual value from the sequence.
+
+**.error(error: Error) : **
+
+ If an Error is encountered, a sequence will emit an error event. This will also terminate the sequence.
+
+**.completed : **
+
+If a sequence ends normally it sends a completed event to its subscribers.
+
 **2. Observer:** This subscribes to observables and listens for changes in them and takes the programmed action on any change.
 **3. Dispose Bag:** A dispose bag holds disposables in it. So basically, it is used for garbage management in the files. When we create subscriptions, we keep adding them to a global dispose bag in a file. So whenever that particular files’ memory is deallocated the subscriptions are properly disposed off from the dispose bag, so this ensures there are no memory leaks in the project.
 **4. Subjects:** Subjects acts dual way, both as an observable as well as an observer. 
@@ -63,13 +86,14 @@ If you want to replay more than the most recent element to new subscribers on th
 
 **Async Subject:** 
 Emits only the last next event in the sequence, and only when the subject receives a completed event.
-**Variable:** A Variable is just a BehaviourSubject wrapper that feels more natural to a none reactive programmers. It can be used like a normal Variable.
 
 
-**5. Relays:** 
-These wrap their respective subjects, but only accept and relay the next events. You cannot add a completed or error event onto relays at all, so they’re great for non-terminating sequences. There are two types of relays: PublishRelay and BehaviorRelay.
+**6. Relays:** 
+These wrap their respective subjects, but only accept and relay the next events. You cannot add a completed or error event onto relays at all, so they’re great for non-terminating sequences. 
+There are two types of relays: **PublishRelay and BehaviorRelay. **
+(It was named as ‘Variable’ in < RxSwift 5.0).
 
-**6. Operators:** 
+**7. Operators:** 
 There are different types of operators such as filtering operators, transforming operators, time-based operators which can be chained on observables using the dot operator so that the input from the observable can be modified as per requirement.
 
 **Filtering operators:** 
@@ -91,6 +115,13 @@ A scheduler is a context on which a process takes place. So schedulers here are 
 **observeOn():** this operator changes the scheduler where the observation happens.
 
 A **Dispose bag** is used for memory management, it keeps on collecting subscriptions and then finally it disposes them off when the controller memory is deallocated. It ensures that there are no memory leaks.
+‘DisposeBag’ in RxSwift helps you to unsubscribe from the Observable Sequences. 
+
+ ‘DisposeBag’ as a garbage collector that cleans up all the unnecessary instances assigned to it in the app after its usage.
+
+
+# What is a Stream?
+A stream is a sequence of ongoing events ordered in time. It can emit three different things: a value (of some type), an error, or a “completed” signal (which we will see in a bit). Consider the “completed” event that takes place, for instance, when the current window or view/ screen containing that button is closed. Touch events or text typing or any kind of user interaction or the change in the objects are really an asynchronous stream.
 
 # RxCocoa
 RxCocoa basically contains UI specific functions built on top of the RxSwift library. These functions help us to configure and use the swift UI components in a reactive way.
