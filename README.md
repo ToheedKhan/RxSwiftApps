@@ -17,6 +17,13 @@ Everything in functional programming is also a pure function.
 This means that a function will **always** produce the same output when given the same input 
 The function creates **zero** side effects outside of it.
 
+Functional programming (FP) is a paradigm which concentrates on computing results rather than on performing actions. When you call a function in a program written with a functional approach, the only significant effect that the function has, is usually to compute a value and return it instead of us giving it a finite set of step-by-step instructions to get the desired results. 
+
+Although, in the functional programming world, behind-the-scenes, the function is, as usual, using its own set of instructions which eventually uses up the CPU time, allocating and writing onto the memory. However, from the programmer’s point of view, the primary effect is the return value. Basically, it is more like an encapsulation of a usual set of instructions providing you with a higher order APIs which you can use to execute those encapsulated instructions to perform certain operations. 
+
+# Declarative Programming
+Functional Programming is a subset of declarative languages that has a heavy focus on recursions. Yes, instead of directly using loops, FP uses recursions to perform an operation which can be achieved with immutability. Loops, on the other hand, require mutability.  
+
 # Imperative programming / Object Oriented Programming
 Issues due to mutable states
 - Concurrency
