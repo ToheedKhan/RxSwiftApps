@@ -24,6 +24,40 @@ Although, in the functional programming world, behind-the-scenes, the function i
 # Declarative Programming
 Functional Programming is a subset of declarative languages that has a heavy focus on recursions. Yes, instead of directly using loops, FP uses recursions to perform an operation which can be achieved with immutability. Loops, on the other hand, require mutability.  
 
+<kbd>
+<img src="https://user-images.githubusercontent.com/4839453/213375001-8e09c6cc-84ca-4d98-8a66-537b419c1c82.png" alt="imperativeVSdeclarative" title="Imperatie VS Declarative" width="700" height="400">
+</kbd>
+
+Let’s take an example of adding numbers from 1 to 10.
+
+<pre><code>
+//Imperative Programming
+var total = 0
+for i in 1...10 {
+    total += i
+}
+print("Imperative: total: ", total); // prints 55
+</code></pre>
+
+Notice how the value of the variable ‘total’ is modified inside the loop which embraces mutability.
+
+On the other hand, functional programming uses the recursive mode and this is how it can be achieved:
+
+<pre><code>
+//Functional Programming
+func sum(start: Int, end: Int, total: Int) -> Int {
+    if (start > end) {
+        return total;
+    }
+    return sum(start: start + 1, end: end, total: total + start)
+}
+print("Functional: total: ", sum(start: 1, end: 10, total: 0)); // prints 55
+</code></pre>
+
+Notice how recursion, the functional approach, accomplishes the same as the for loop by calling itself with a new start (start + 1) and a new accumulator (total + start). It doesn’t modify the old values. Instead, it uses new values calculated from the old.
+
+Consider this program running in a multi-threaded environment where one thread tries to access the variable’s value while another thread mutates it. This might lead the program to an unstable state. The recursive approach or the state of immutability is the safest in such cases. Hence, functional programming is definitely effective than imperative or traditional programming.
+
 # Imperative programming / Object Oriented Programming
 Issues due to mutable states
 - Concurrency
@@ -57,15 +91,15 @@ In RxSwift, streams are represented by Observable Sequences. Arrays, Strings or 
 
 **Observable sequences** can emit zero or more events over their lifetime. In RxSwift, an Event is just an Enumeration Type with 3 possible states:
 
-**.next(value: T) : **
+**.next(value: T):**
 
- When a value or collection of values is added to an observable sequence it will send the next event to its subscribers as seen above. The associated value will contain the actual value from the sequence.
+When a value or collection of values is added to an observable sequence it will send the next event to its subscribers as seen above. The associated value will contain the actual value from the sequence.
 
-**.error(error: Error) : **
+**.error(error: Error):**
 
- If an Error is encountered, a sequence will emit an error event. This will also terminate the sequence.
+If an Error is encountered, a sequence will emit an error event. This will also terminate the sequence.
 
-**.completed : **
+**.completed:**
 
 If a sequence ends normally it sends a completed event to its subscribers.
 
@@ -132,3 +166,26 @@ A stream is a sequence of ongoing events ordered in time. It can emit three diff
 
 # RxCocoa
 RxCocoa basically contains UI specific functions built on top of the RxSwift library. These functions help us to configure and use the swift UI components in a reactive way.
+
+# Higher Order Functions
+A Higher Order Function (HOF) is a function that takes one or more arguments as functions and returns a function as its result.
+
+## 1. map
+The map method solves the problem of transforming elements of an array using a function. This mostly used for the transformation of array objects from one form/ type to another form/ type.
+
+## 2. filter
+The filter method solves the problem of selecting the elements of an array that pass a certain condition.
+
+## 3. reduce
+The reduce method solves the problem of combining the elements of an array to a single value.
+‘reduce’ method takes 2 parameters –
+
+(i) First represents the starting value from which it should start accumulating
+
+(ii) Second represents the operation (e.g. addition in the above example) which should be performed on the values.
+
+### Here are the key takeaways –
+
+Group/ Generalize/ Break the common set of code into independent functions.
+Do not iterate over the arrays. Instead, use ‘map’ & ‘reduce’. 
+Use recursions instead of loops.
