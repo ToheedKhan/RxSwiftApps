@@ -3,7 +3,7 @@
 
 # Functional Programming
 
-Mutabililty - Everything immutable.
+**Mutabililty** - Everything immutable.
 Everything in function programming, the variables that you create are actually constant.
 
 **First class/ High order functions**
@@ -80,6 +80,15 @@ Simplified developing asynchronous programs but allow your code to react to new 
 RxSwift library allows you to write asynchronous code in a much more concise and compact and maintainable way.
 
 Reactive programming basically means relying on entities emitting elements, subscribing to its changes and reacting to those changes. So, reactive programming saves you from having to re-check states and manually putting conditions in your code. It remarkably reduces the code lines and makes the code cleaner and easier to manage. Most importantly, it manages asynchronous code execution in a very elegant manner owing to its observable-subscriber method.
+
+**_ReactiveX is a combination of the best ideas from the Observer pattern, the Iterator pattern, and functional programming_**
+
+Basically, you have to change your perspective from statically assigning a value to the variable, to observing something that can and probably will change in the future.
+It just simplifies your work. Instead of notifications, which are hard to test, we can use signals. Instead of delegates, which take a lot of place in the code, we can write blocks and remove multiple switches/ifs.
+
+We also have KVO, IBActions, input filters, MVVM and many, many more which are handled smoothly by RxSwift.
+
+Your smartphone is **observable**. It emits signals like Facebook notifications, messages, Snapchat notifications and so on. You are naturally subscribed to it, so you get every notification in your home screen. You can now decide what to do with that signal. You are an **observer**.
 
 **Reactive programming is programming with asynchronous data streams**
  
