@@ -91,6 +91,8 @@ We also have KVO, IBActions, input filters, MVVM and many, many more which are h
 Your smartphone is **observable**. It emits signals like Facebook notifications, messages, Snapchat notifications and so on. You are naturally subscribed to it, so you get every notification in your home screen. You can now decide what to do with that signal. You are an **observer**.
 
 **Reactive programming is programming with asynchronous data streams**
+
+**Binding** just means connecting. Connect our **Observables with Subjects**.
  
 These are some basic terminologies that are used while writing code using the Reactive Programming paradigm.
 
