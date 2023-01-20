@@ -13,9 +13,12 @@
 		8A4129B3297953AE00304C46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A4129B1297953AE00304C46 /* Main.storyboard */; };
 		8A4129B5297953AF00304C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A4129B4297953AF00304C46 /* Assets.xcassets */; };
 		8A4129B8297953AF00304C46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A4129B6297953AF00304C46 /* LaunchScreen.storyboard */; };
+		FCFA3FCCCFA24272E621CEC2 /* Pods_CitySearcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A72D59E2AE70B7F9E62348C /* Pods_CitySearcher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B510FCE15654DC8B4BDBCFA /* Pods-CitySearcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitySearcher.release.xcconfig"; path = "Target Support Files/Pods-CitySearcher/Pods-CitySearcher.release.xcconfig"; sourceTree = "<group>"; };
+		7A72D59E2AE70B7F9E62348C /* Pods_CitySearcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitySearcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4129A8297953AE00304C46 /* CitySearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitySearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4129AB297953AE00304C46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A4129AD297953AE00304C46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		8A4129B4297953AF00304C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A4129B7297953AF00304C46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A4129B9297953AF00304C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC625E3A65DD460D1C38F9A6 /* Pods-CitySearcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitySearcher.debug.xcconfig"; path = "Target Support Files/Pods-CitySearcher/Pods-CitySearcher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFA3FCCCFA24272E621CEC2 /* Pods_CitySearcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		244D061AECCF420B587DCDE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A72D59E2AE70B7F9E62348C /* Pods_CitySearcher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		745BFBBFD7ADFA3BA417332E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC625E3A65DD460D1C38F9A6 /* Pods-CitySearcher.debug.xcconfig */,
+				5B510FCE15654DC8B4BDBCFA /* Pods-CitySearcher.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8A41299F297953AE00304C46 = {
 			isa = PBXGroup;
 			children = (
 				8A4129AA297953AE00304C46 /* CitySearcher */,
 				8A4129A9297953AE00304C46 /* Products */,
+				745BFBBFD7ADFA3BA417332E /* Pods */,
+				244D061AECCF420B587DCDE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A4129BC297953AF00304C46 /* Build configuration list for PBXNativeTarget "CitySearcher" */;
 			buildPhases = (
+				C20E77D8DABCEBE8D37157C3 /* [CP] Check Pods Manifest.lock */,
 				8A4129A4297953AE00304C46 /* Sources */,
 				8A4129A5297953AE00304C46 /* Frameworks */,
 				8A4129A6297953AE00304C46 /* Resources */,
+				74354A32FEC58E9AE87ED97A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74354A32FEC58E9AE87ED97A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CitySearcher/Pods-CitySearcher-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CitySearcher/Pods-CitySearcher-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CitySearcher/Pods-CitySearcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C20E77D8DABCEBE8D37157C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CitySearcher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A4129A4297953AE00304C46 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		8A4129BD297953AF00304C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC625E3A65DD460D1C38F9A6 /* Pods-CitySearcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +379,7 @@
 		};
 		8A4129BE297953AF00304C46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B510FCE15654DC8B4BDBCFA /* Pods-CitySearcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
