@@ -15,6 +15,7 @@
 		8A4129D8297A93A800304C46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A4129D6297A93A800304C46 /* LaunchScreen.storyboard */; };
 		8A4129E0297A961500304C46 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4129DF297A961500304C46 /* PhotosCollectionViewController.swift */; };
 		8A4129E2297A963700304C46 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4129E1297A963700304C46 /* PhotoCollectionViewCell.swift */; };
+		8A4129E42980FB1400304C46 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4129E32980FB1400304C46 /* FilterService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8A4129D9297A93A800304C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A4129DF297A961500304C46 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		8A4129E1297A963700304C46 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		8A4129E32980FB1400304C46 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			children = (
 				8A4129CA297A93A700304C46 /* CameraFilter */,
 				8A4129C9297A93A700304C46 /* Products */,
+				9901E81F02669D4D38E8E79E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,8 +72,16 @@
 				8A4129D9297A93A800304C46 /* Info.plist */,
 				8A4129DF297A961500304C46 /* PhotosCollectionViewController.swift */,
 				8A4129E1297A963700304C46 /* PhotoCollectionViewCell.swift */,
+				8A4129E32980FB1400304C46 /* FilterService.swift */,
 			);
 			path = CameraFilter;
+			sourceTree = "<group>";
+		};
+		9901E81F02669D4D38E8E79E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 				8A4129D0297A93A700304C46 /* ViewController.swift in Sources */,
 				8A4129E2297A963700304C46 /* PhotoCollectionViewCell.swift in Sources */,
 				8A4129CC297A93A700304C46 /* AppDelegate.swift in Sources */,
+				8A4129E42980FB1400304C46 /* FilterService.swift in Sources */,
 				8A4129CE297A93A700304C46 /* SceneDelegate.swift in Sources */,
 				8A4129E0297A961500304C46 /* PhotosCollectionViewController.swift in Sources */,
 			);
