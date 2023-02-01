@@ -10,7 +10,7 @@
         <!--Good News-->
         <scene sceneID="Dw4-j2-Hd3">
             <objects>
-                <tableViewController id="NVC-Li-8Tf" sceneMemberID="viewController">
+                <tableViewController id="NVC-Li-8Tf" customClass="NewsTableViewController" customModule="GoodNews" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="EUb-tR-QKS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,16 +24,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JOD-5Q-Ljf">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
+                                            <rect key="frame" x="20" y="0.0" width="353" height="69"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWB-36-EjL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWB-36-EjL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aK7-8J-wLP">
-                                                    <rect key="frame" x="0.0" y="52" width="393" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aK7-8J-wLP">
+                                                    <rect key="frame" x="0.0" y="52" width="353" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.36005960051546393" green="0.36005960051546393" blue="0.36005960051546393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -43,8 +43,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="JOD-5Q-Ljf" secondAttribute="bottom" id="2Z7-Uu-oa3"/>
-                                        <constraint firstItem="JOD-5Q-Ljf" firstAttribute="leading" secondItem="dt0-x4-bVu" secondAttribute="leadingMargin" constant="-20" id="r1T-Eu-n2D"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="JOD-5Q-Ljf" secondAttribute="trailing" constant="-20" id="vhW-2M-NmR"/>
+                                        <constraint firstItem="JOD-5Q-Ljf" firstAttribute="leading" secondItem="dt0-x4-bVu" secondAttribute="leadingMargin" id="r1T-Eu-n2D"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="JOD-5Q-Ljf" secondAttribute="trailing" id="vhW-2M-NmR"/>
                                         <constraint firstItem="JOD-5Q-Ljf" firstAttribute="topMargin" secondItem="dt0-x4-bVu" secondAttribute="top" id="wCB-LQ-PJf"/>
                                     </constraints>
                                 </tableViewCellContentView>
