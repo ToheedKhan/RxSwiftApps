@@ -145,6 +145,9 @@ These wrap their respective subjects, but only accept and relay the next events.
 There are two types of relays: **PublishRelay and BehaviorRelay. **
 (It was named as ‘Variable’ in < RxSwift 5.0).
 
+**BehaviorRelay** is a wrapper for **BehaviorSubject.**
+Unlike **BehaviorSubject** it can’t terminate with error or completed.
+
 **7. Operators:** 
 There are different types of operators such as filtering operators, transforming operators, time-based operators which can be chained on observables using the dot operator so that the input from the observable can be modified as per requirement.
 
