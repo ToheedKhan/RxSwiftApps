@@ -28,7 +28,7 @@ class NewsTableViewController: UITableViewController {
     }
     
     private func populateNews() {
-        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=7cba6346bfe04056b4d19fd3feef6980")!
+       /* let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=7cba6346bfe04056b4d19fd3feef6980")!
         //just - Returns an observable sequence that contains a single element.
         Observable.just(url)
             .flatMap { url -> Observable<Data> in
@@ -47,6 +47,27 @@ class NewsTableViewController: UITableViewController {
                 }
             }
         }).disposed(by: disposeBag)
+        */
+        
+        /*
+         
+         //Move this part into the ArticleList extension
+         
+         let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=7cba6346bfe04056b4d19fd3feef6980")!
+         
+         let resource = Resource<ArticlesList>(url: url)
+         */
+        URLRequest.load(resource: ArticleList.all)
+            .subscribe(onNext: { [weak self] result in
+                
+                if let result = result {
+                    self?.articles = result.articles
+                    print(result)
+                    DispatchQueue.main.async {
+                        self?.tableView.reloadData()
+                    }
+                }
+            }).disposed(by: disposeBag)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
