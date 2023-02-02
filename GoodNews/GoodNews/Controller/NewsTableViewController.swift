@@ -29,6 +29,7 @@ class NewsTableViewController: UITableViewController {
     
     private func populateNews() {
        /* let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=7cba6346bfe04056b4d19fd3feef6980")!
+        //You can use observable(from as well
         //just - Returns an observable sequence that contains a single element.
         Observable.just(url)
             .flatMap { url -> Observable<Data> in
