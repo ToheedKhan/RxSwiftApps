@@ -45,3 +45,18 @@ that self will never be nil, because if self is nil, then, it's going to blow up
 ** unowned **: Inside all view controllers which are released after the closure task is performed.
 
 ** weak **: Any other case
+
+# Error handling cases
+
+- No internet connection
+- API Error OR HTTP Error
+- Invalid Input
+
+Two different ways to handle the error
+
+Observable -> Catch -> Subscriptions (catchErrorJustReturn/CatchAndReturn) (Eg- Invalid City)
+
+
+
+Observable -> Retry -> Subscriptions (catchErrorJustReturn/CatchAndReturn) (Eg - No internet connection)
+
