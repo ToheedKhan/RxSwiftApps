@@ -16,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A0583B3298B9C3F006141A7 /* CombiningOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = CombiningOperators.playground; path = /Users/toheed/iOS/Udemy/RxSwift/OperatorsDemo/OperatorsDemo/CombiningOperators.playground; sourceTree = "<absolute>"; };
+		8A0583B4298B9C7C006141A7 /* FilterOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FilterOperator.playground; sourceTree = "<group>"; };
+		8A0583B5298B9C7C006141A7 /* TransformingOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TransformingOperators.playground; sourceTree = "<group>"; };
 		8A0C66C1298913A100AA31EE /* OperatorsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OperatorsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A0C66C4298913A100AA31EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A0C66C6298913A100AA31EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,8 +27,6 @@
 		8A0C66CD298913A300AA31EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A0C66D0298913A300AA31EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A0C66D2298913A300AA31EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A0C66D92989148800AA31EE /* FilterOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FilterOperator.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		8A0C66DA298A4AC700AA31EE /* TransformingOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TransformingOperators.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +59,9 @@
 		8A0C66C3298913A100AA31EE /* OperatorsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8A0C66DA298A4AC700AA31EE /* TransformingOperators.playground */,
-				8A0C66D92989148800AA31EE /* FilterOperator.playground */,
+				8A0583B3298B9C3F006141A7 /* CombiningOperators.playground */,
+				8A0583B4298B9C7C006141A7 /* FilterOperator.playground */,
+				8A0583B5298B9C7C006141A7 /* TransformingOperators.playground */,
 				8A0C66C4298913A100AA31EE /* AppDelegate.swift */,
 				8A0C66C6298913A100AA31EE /* SceneDelegate.swift */,
 				8A0C66C8298913A100AA31EE /* ViewController.swift */,

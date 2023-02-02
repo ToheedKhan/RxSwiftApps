@@ -17,3 +17,12 @@ observable and then flattening it out and returning and observable.
 
 * ** FlatMapLatest **
 It only observes to the latest observable.
+
+** Combining Operators **
+* ** StartsWith **
+* ** Concat **
+* ** Merge ** - Merge based on arrival
+* ** CombineLatest ** It always keep track of the latest values which are coming from left and right sequences.
+* ** WithLatestFrom **
+* ** Reduce **
+* ** Scan **
