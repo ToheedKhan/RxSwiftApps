@@ -6,7 +6,6 @@
 //
 
 import Foundation
-//5936fc993cc803d29b45892386d83ec2
 
 struct WeatherResult: Decodable {
     let main: Weather

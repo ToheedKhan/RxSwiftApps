@@ -95,9 +95,18 @@ class ViewController: UIViewController {
         
         //Binding - Way 2 Using ControlProperty and Driver
 
+//        let search = URLRequest.load(resource: resource)
+//            .observe(on: MainScheduler.instance)
+//            .asDriver(onErrorJustReturn: WeatherResult.empty)
+        
+        //Catching errors
+        
         let search = URLRequest.load(resource: resource)
-            .observe(on: MainScheduler.instance)
-            .asDriver(onErrorJustReturn: WeatherResult.empty)
+        .observeOn(MainScheduler.instance)
+            .catchError { error in
+                print(error.localizedDescription)
+                return Observable.just(WeatherResult.empty)
+            }.asDriver(onErrorJustReturn: WeatherResult.empty)
 
         search.map { "\($0.main.temp) ℉" }
             .drive(self.temperatureLabel.rx.text)
