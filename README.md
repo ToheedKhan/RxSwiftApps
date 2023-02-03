@@ -136,6 +136,10 @@ A behaviour subject will give any subscriber the most recent element and everyth
 Initialized with buffer size and will maintain a buffer of elements up to that size and replay it to new subscribers.
 If you want to replay more than the most recent element to new subscribers on the initial subscription you need to use a ReplaySubject. With a ReplaySubject, you can define how many recent items you want to emit to new subscribers.
 
+In short, it allows us to replay emitted elements to future observers. We can define a *buffersize* to specify the maximum number of elements to be replayed.
+
+It can be useful when you want to store received data and provide it to all future subscribers. 
+
 **Async Subject:** 
 Emits only the last next event in the sequence, and only when the subject receives a completed event.
 
