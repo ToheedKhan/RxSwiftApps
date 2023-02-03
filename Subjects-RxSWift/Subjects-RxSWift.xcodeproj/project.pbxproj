@@ -24,7 +24,7 @@
 		8A058422298CDDFD006141A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A058425298CDDFD006141A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A058427298CDDFD006141A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A05842D298CDEBF006141A7 /* SubjectPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = SubjectPlayground.playground; path = "/Users/toheed/iOS/Udemy/RxSwift/Subjects-RxSWift/Subjects-RxSWift/SubjectPlayground.playground"; sourceTree = "<absolute>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8A65BC0E298CEE6400D5021B /* SubjectPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SubjectPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 		8A058418298CDDFA006141A7 /* Subjects-RxSWift */ = {
 			isa = PBXGroup;
 			children = (
-				8A05842D298CDEBF006141A7 /* SubjectPlayground.playground */,
+				8A65BC0E298CEE6400D5021B /* SubjectPlayground.playground */,
 				8A058419298CDDFA006141A7 /* AppDelegate.swift */,
 				8A05841B298CDDFA006141A7 /* SceneDelegate.swift */,
 				8A05841D298CDDFA006141A7 /* ViewController.swift */,
